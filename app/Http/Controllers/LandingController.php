@@ -54,6 +54,21 @@ class LandingController extends Controller
         return view('frontend.page.aboutus', compact('contact'));
     }
 
+    public function services() {
+        // return view('frontend.page.services');
+
+        $contact = Contact::orderBy('id', 'desc')->first();
+        return view('frontend.page.services', compact('contact'));
+    }
+
+    public function portfolio() {
+        // return view('frontend.page.portfolio');
+
+        $contact = Contact::orderBy('id', 'desc')->first();
+        return view('frontend.page.portfolio', compact('contact'));
+    }
+
+
     //contactus
     public function contactus() {
         //get data contact

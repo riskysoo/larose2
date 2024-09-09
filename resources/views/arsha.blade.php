@@ -22,7 +22,9 @@
   <link href="{{asset('arsha/assets/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
   <link href="{{asset('arsha/assets/vendor/aos/aos.css" rel="stylesheet')}}">
   <link href="{{asset('arsha/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet')}}">
-  <link href="{{asset('arsha/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet')}}">
+  <link href="{{asset('arsha/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet')}}"><link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 
   <!-- Main CSS File -->
   <link href="{{asset('arsha/assets/css/main.css')}}" rel="stylesheet">
@@ -44,15 +46,15 @@
       <a href="index.html" class="logo d-flex align-items-center me-auto">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="{{asset('arsha/assets/img/logo.png')}}" alt=""> -->
-        <h1 class="sitename">Arsha</h1>
+        <h1 class="sitename">Larose</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero" class="active">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="{{ route('landing-page')}}" class="active">Home</a></li>
+          <li><a href="{{ route('aboutus')}}">About</a></li>
+          <li><a href="{{ route('services')}}">Services</a></li>
+          <li><a href="{{ route('portfolio')}}">Portfolio</a></li>
           <li><a href="#team">Team</a></li>
           <li><a href="#pricing">Pricing</a></li>
           <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
@@ -105,50 +107,14 @@
 
     </section><!-- /Hero Section -->
 
-    <!-- Clients Section -->
+        <!-- Clients Section -->
     <section id="clients" class="clients section light-background">
 
-      <div class="container" data-aos="zoom-in">
+        <div class="container" data-aos="zoom-in">
 
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              },
-              "breakpoints": {
-                "320": {
-                  "slidesPerView": 2,
-                  "spaceBetween": 40
-                },
-                "480": {
-                  "slidesPerView": 3,
-                  "spaceBetween": 60
-                },
-                "640": {
-                  "slidesPerView": 4,
-                  "spaceBetween": 80
-                },
-                "992": {
-                  "slidesPerView": 5,
-                  "spaceBetween": 120
-                },
-                "1200": {
-                  "slidesPerView": 6,
-                  "spaceBetween": 120
-                }
-              }
-            }
-          </script>
-          <div class="swiper-wrapper align-items-center">
+        <!-- HTML untuk Swiper -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
             <div class="swiper-slide"><img src="{{asset('arsha/assets/img/clients/client-1.png')}}" class="img-fluid" alt=""></div>
             <div class="swiper-slide"><img src="{{asset('arsha/assets/img/clients/client-2.png')}}" class="img-fluid" alt=""></div>
             <div class="swiper-slide"><img src="{{asset('arsha/assets/img/clients/client-3.png')}}" class="img-fluid" alt=""></div>
@@ -157,47 +123,18 @@
             <div class="swiper-slide"><img src="{{asset('arsha/assets/img/clients/client-6.png')}}" class="img-fluid" alt=""></div>
             <div class="swiper-slide"><img src="{{asset('arsha/assets/img/clients/client-7.png')}}" class="img-fluid" alt=""></div>
             <div class="swiper-slide"><img src="{{asset('arsha/assets/img/clients/client-8.png')}}" class="img-fluid" alt=""></div>
-          </div>
+            </div>
+            <!-- Tambahkan elemen pagination -->
+            <div class="swiper-pagination"></div>
         </div>
+
 
       </div>
 
     </section><!-- /Clients Section -->
 
     <!-- About Section -->
-    <section id="about" class="about section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>About Us</h2>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p>
-            <ul>
-              <li><i class="bi bi-check2-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
-              <li><i class="bi bi-check2-circle"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
-              <li><i class="bi bi-check2-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo</span></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <p>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-            <a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- /About Section -->
+    <!-- /About Section -->
 
     <!-- Why Us Section -->
     <section id="why-us" class="section why-us light-background" data-builder="section">
@@ -889,7 +826,7 @@
           </div>
 
           <div class="col-lg-7">
-            <form action="{{asset('arsha/forms/contact.php')}}" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
               <div class="row gy-4">
 
                 <div class="col-md-6">
@@ -940,7 +877,7 @@
           <div class="col-lg-6">
             <h4>Join Our Newsletter</h4>
             <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
-            <form action="{{asset('arsha/forms/newsletter.php')}}" method="post" class="php-email-form">
+            <form action="forms/newsletter.php" method="post" class="php-email-form">
               <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
               <div class="loading">Loading</div>
               <div class="error-message"></div>
@@ -1020,6 +957,44 @@
   <script src="{{asset('arsha/assets/vendor/waypoints/noframework.waypoints.js')}}"></script>
   <script src="{{asset('arsha/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js')}}"></script>
   <script src="{{asset('arsha/assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      loop: true,
+      speed: 600,
+      autoplay: {
+        delay: 5000,
+      },
+      slidesPerView: 'auto',
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+        480: {
+          slidesPerView: 3,
+          spaceBetween: 60,
+        },
+        640: {
+          slidesPerView: 4,
+          spaceBetween: 80,
+        },
+        992: {
+          slidesPerView: 5,
+          spaceBetween: 120,
+        },
+        1200: {
+          slidesPerView: 6,
+          spaceBetween: 120,
+        },
+      },
+    });
+  </script>
+
 
   <!-- Main JS File -->
   <script src="{{asset('arsha/assets/js/main.js')}}"></script>
