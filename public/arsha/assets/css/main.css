@@ -17,8 +17,27 @@
   --nav-font: "Poppins",  sans-serif;
 }
 
+@font-face {
+    font-family: 'Eras ITC Bold';
+    src: url('fonts/eras-itc-bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  .sitename {
+    font-family: 'Eras ITC Bold', sans-serif;
+    font-weight: bold; /* Jika Anda ingin memastikan bold */
+  }
+
+  .sitename {
+    font-family: 'Roboto', sans-serif; /* Ganti dengan font alternatif jika perlu */
+    font-weight: bold; /* Atur tebal sesuai kebutuhan */
+  }
+
+
+
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
+:root {
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #37517e; /* Color for headings, subheadings and title throughout the website */
@@ -1709,6 +1728,11 @@ section,
   margin: 0 auto 15px auto;
 }
 
+.italic-text {
+    font-style: italic;
+  }
+
+
 .testimonials .swiper-wrapper {
   height: auto;
 }
@@ -2065,3 +2089,46 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+.bold-text {
+    font-weight: bold;
+}
+
+.col-lg-6 {
+    padding: 5px;
+}
+
+/* Mengatur font Poppins sebagai font default untuk seluruh halaman */
+body {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  /* Opsional: Anda juga dapat menyesuaikan gaya font untuk elemen spesifik jika diperlukan */
+  h2, p {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  /* Tambahkan aturan lain sesuai kebutuhan */
+
+  .whatsapp-floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366; /* Warna hijau WhatsApp */
+    border-radius: 50%;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: white;
+    text-decoration: none;
+  }
+
+  .whatsapp-floating-button:hover {
+    background-color: #128C7E; /* Warna hijau WhatsApp lebih gelap saat hover */
+  }
+
+  .whatsapp-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+

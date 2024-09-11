@@ -23,6 +23,9 @@
   <link href="{{asset('arsha/assets/vendor/aos/aos.css" rel="stylesheet')}}">
   <link href="{{asset('arsha/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet')}}">
   <link href="{{asset('arsha/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet')}}"><link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 
@@ -43,43 +46,31 @@
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="{{asset('arsha/assets/img/logo.png')}}" alt=""> -->
-        <h1 class="sitename">Larose</h1>
-      </a>
+        <a href="{{ route('landing-page')}}" class="logo d-flex align-items-center me-auto">
+            <!-- Logo Image -->
+            <img src="{{asset('arsha/assets/img/Logo-LSA.png')}}" alt="Logo" class="logo-img" />
+
+            <!-- Text -->
+            <h1 class="sitename" style="color: #d1001c;">Larose</h1> <!-- Warna merah hati -->
+        </a>
+
+
 
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="{{ route('landing-page')}}" class="active">Home</a></li>
           <li><a href="{{ route('aboutus')}}">About</a></li>
+          <li><a href="{{ route('portfolio')}}">Product</a></li>
+
           <li><a href="{{ route('services')}}">Services</a></li>
-          <li><a href="{{ route('portfolio')}}">Portfolio</a></li>
-          <li><a href="#team">Team</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="{{ route('ourcustomer')}}">Our Customer</a></li>
+          <li><a href="{{ route('career')}}">Career</a></li>
+          <li><a href="{{ route('contactus')}}">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted" href="#about">Get Started</a>
+      <a class="btn-getstarted" href="{{('download')}}">Download</a>
 
     </div>
   </header>
@@ -92,10 +83,10 @@
       <div class="container">
         <div class="row gy-4">
           <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="zoom-out">
-            <h1>Better Solutions For Your Business</h1>
-            <p>We are team of talented designers making websites with Bootstrap</p>
+            <h1 class="sitename" style="color: #d1001c;">PT LAROSE SHUKUFUKU ANDALAN</h1>
+            <p class="italic-text">"Providing The Best Products Through Continuous Experience"</p>
             <div class="d-flex">
-              <a href="#about" class="btn-get-started">Get Started</a>
+              <a href="{{ route('portfolio')}}" class="btn-get-started">Get Started</a>
               <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
             </div>
           </div>
@@ -115,7 +106,7 @@
         <!-- HTML untuk Swiper -->
         <div class="swiper-container">
             <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="{{asset('arsha/assets/img/clients/client-1.png')}}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{{asset('arsha/assets/img/clients/client-1.jpg')}}" class="img-fluid" alt=""></div>
             <div class="swiper-slide"><img src="{{asset('arsha/assets/img/clients/client-2.png')}}" class="img-fluid" alt=""></div>
             <div class="swiper-slide"><img src="{{asset('arsha/assets/img/clients/client-3.png')}}" class="img-fluid" alt=""></div>
             <div class="swiper-slide"><img src="{{asset('arsha/assets/img/clients/client-4.png')}}" class="img-fluid" alt=""></div>
@@ -146,35 +137,29 @@
           <div class="col-lg-7 d-flex flex-column justify-content-center order-2 order-lg-1">
 
             <div class="content px-xl-5" data-aos="fade-up" data-aos-delay="100">
-              <h3><span>Eum ipsam laborum deleniti </span><strong>velit pariatur architecto aut nihil</strong></h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-              </p>
-            </div>
+                <h3 style="font-size: 1.8rem;"><strong>We established the company since 2014, by prioritizing quality products and using domestic product absorption.</strong></h3>
+              </div>
 
             <div class="faq-container px-xl-5" data-aos="fade-up" data-aos-delay="200">
 
               <div class="faq-item faq-active">
 
-                <h3><span>01</span> Non consectetur a erat nam at lectus urna duis?</h3>
+                <h3> And we strive to be a company that implements good quality management so as to produce good quality products according to Iso 9001: 2015.</h3>
                 <div class="faq-content">
-                  <p>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
 
-              <div class="faq-item">
-                <h3><span>02</span> Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?</h3>
+              <div class="faq-item faq-active">
+                <h3> Maintain the environment in our work area to remain friendly to the work environment and around our company according to refer to Iso 14001: 2015.</h3>
                 <div class="faq-content">
-                  <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
 
-              <div class="faq-item">
-                <h3><span>03</span> Dolor sit amet consectetur adipiscing elit pellentesque?</h3>
+              <div class="faq-item faq-active">
+                <h3> And also provide and implement a safe work system for all our employees referring to Iso 45001: 2018.</h3>
                 <div class="faq-content">
-                  <p>Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
@@ -200,12 +185,12 @@
         <div class="row">
 
           <div class="col-lg-6 d-flex align-items-center">
-            <img src="{{asset('arsha/assets/img/skills.png')}}" class="img-fluid" alt="">
+            <img src="{{asset('arsha/assets/img/skills.jpg')}}" class="img-fluid" alt="">
           </div>
 
           <div class="col-lg-6 pt-4 pt-lg-0 content">
 
-            <h3>Voluptatem dignissimos provident quasi corporis voluptas</h3>
+            <h3>OUR BRANCHES</h3>
             <p class="fst-italic">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
@@ -213,28 +198,28 @@
             <div class="skills-content skills-animation">
 
               <div class="progress">
-                <span class="skill"><span>HTML</span> <i class="val">100%</i></span>
+                <span class="skill"><span>1</span> <i class="val">100%</i></span>
                 <div class="progress-bar-wrap">
                   <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
               </div><!-- End Skills Item -->
 
               <div class="progress">
-                <span class="skill"><span>CSS</span> <i class="val">90%</i></span>
+                <span class="skill"><span>2</span> <i class="val">90%</i></span>
                 <div class="progress-bar-wrap">
                   <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
               </div><!-- End Skills Item -->
 
               <div class="progress">
-                <span class="skill"><span>JavaScript</span> <i class="val">75%</i></span>
+                <span class="skill"><span>3</span> <i class="val">75%</i></span>
                 <div class="progress-bar-wrap">
                   <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
               </div><!-- End Skills Item -->
 
               <div class="progress">
-                <span class="skill"><span>Photoshop</span> <i class="val">55%</i></span>
+                <span class="skill"><span>4</span> <i class="val">55%</i></span>
                 <div class="progress-bar-wrap">
                   <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
@@ -249,197 +234,42 @@
 
     </section><!-- /Skills Section -->
 
-    <!-- Services Section -->
-    <section id="services" class="services section light-background">
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Services</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
+    <section id="portfolio" class="portfolio section mt-5" style="margin-top: 10%">
 
-      <div class="container">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>All Product</h2>
+        </div><!-- End Section Title -->
 
-        <div class="row gy-4">
+        <div class="container">
 
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item position-relative">
-              <div class="icon"><i class="bi bi-activity icon"></i></div>
-              <h4><a href="" class="stretched-link">Lorem Ipsum</a></h4>
-              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
-            </div>
-          </div><!-- End Service Item -->
+          <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
 
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item position-relative">
-              <div class="icon"><i class="bi bi-bounding-box-circles icon"></i></div>
-              <h4><a href="" class="stretched-link">Sed ut perspici</a></h4>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
-            </div>
-          </div><!-- End Service Item -->
 
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item position-relative">
-              <div class="icon"><i class="bi bi-calendar4-week icon"></i></div>
-              <h4><a href="" class="stretched-link">Magni Dolores</a></h4>
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-item position-relative">
-              <div class="icon"><i class="bi bi-broadcast icon"></i></div>
-              <h4><a href="" class="stretched-link">Nemo Enim</a></h4>
-              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-            </div>
-          </div><!-- End Service Item -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Services Section -->
-
-    <!-- Call To Action Section -->
-    <section id="call-to-action" class="call-to-action section dark-background">
-
-      <img src="{{asset('arsha/assets/img/cta-bg.jpg')}}" alt="">
-
-      <div class="container">
-
-        <div class="row" data-aos="zoom-in" data-aos-delay="100">
-          <div class="col-xl-9 text-center text-xl-start">
-            <h3>Call To Action</h3>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+      @forelse ($products as $product )
+      <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+          <img src="{{('arsha/assets/img/masonry-portfolio/masonry-portfolio-1.jpg')}}" class="img-fluid" alt="">
+          <div class="portfolio-info">
+          <h4> {{$product->name}} </h4>
+          <p> {!! $product->description !!} </p>
+          <a href="{{('arsha/assets/img/masonry-portfolio/masonry-portfolio-1.jpg')}}" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+          <a href="{{ route('product', $product->slug)}}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
           </div>
-          <div class="col-xl-3 cta-btn-container text-center">
-            <a class="cta-btn align-middle" href="#">Call To Action</a>
+      </div>
+      @empty
+
+      @endforelse
+
+
+            </div><!-- End Portfolio Container -->
+
           </div>
-        </div>
-
-      </div>
-
-    </section><!-- /Call To Action Section -->
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Portfolio</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-product">Card</li>
-            <li data-filter=".filter-branding">Web</li>
-          </ul><!-- End Portfolio Filters -->
-
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="{{('arsha/assets/img/masonry-portfolio/masonry-portfolio-1.jpg')}}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="{{('arsha/assets/img/masonry-portfolio/masonry-portfolio-1.jpg')}}" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="{{('arsha/assets/img/masonry-portfolio/masonry-portfolio-2.jpg')}}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Product 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="{{('arsha/assets/img/masonry-portfolio/masonry-portfolio-2.jpg')}}" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="{{('arsha/assets/img/masonry-portfolio/masonry-portfolio-3.jpg')}}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Branding 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="{{('arsha/assets/img/masonry-portfolio/masonry-portfolio-3.jpg')}}" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="{{('arsha/assets/img/masonry-portfolio/masonry-portfolio-4.jpg')}}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="{{('arsha/assets/img/masonry-portfolio/masonry-portfolio-4.jpg')}}" title="App 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="{{('arsha/assets/img/masonry-portfolio/masonry-portfolio-5.jpg')}}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Product 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="{{('arsha/assets/img/masonry-portfolio/masonry-portfolio-5.jpg')}}" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="{{('arsha/assets/img/masonry-portfolio/masonry-portfolio-6.jpg')}}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Branding 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="{{('arsha/assets/img/masonry-portfolio/masonry-portfolio-6.jpg')}}" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="{{('arsha/assets/img/masonry-portfolio/masonry-portfolio-7.jpg')}}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="{{('arsha/assets/img/masonry-portfolio/masonry-portfolio-7.jpg')}}" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="{{('arsha/assets/img/masonry-portfolio/masonry-portfolio-8.jpg')}}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Product 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="{{('arsha/assets/img/masonry-portfolio/masonry-portfolio-8.jpg')}}" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="{{('arsha/assets/img/masonry-portfolio/masonry-portfolio-9.jpg')}}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Branding 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="{{('arsha/assets/img/masonry-portfolio/masonry-portfolio-9.jpg')}}" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-          </div><!-- End Portfolio Container -->
 
         </div>
 
-      </div>
-
-    </section><!-- /Portfolio Section -->
+  </section><!-- /Portfolio Section -->
 
     <!-- Team Section -->
     <section id="team" class="team section">
@@ -528,69 +358,7 @@
 
     </section><!-- /Team Section -->
 
-    <!-- Pricing Section -->
-    <section id="pricing" class="pricing section light-background">
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Pricing</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
-            <div class="pricing-item">
-              <h3>Free Plan</h3>
-              <h4><sup>$</sup>0<span> / month</span></h4>
-              <ul>
-                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-                <li class="na"><i class="bi bi-x"></i> <span>Pharetra massa massa ultricies</span></li>
-                <li class="na"><i class="bi bi-x"></i> <span>Massa ultricies mi quis hendrerit</span></li>
-              </ul>
-              <a href="#" class="buy-btn">Buy Now</a>
-            </div>
-          </div><!-- End Pricing Item -->
-
-          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
-            <div class="pricing-item featured">
-              <h3>Business Plan</h3>
-              <h4><sup>$</sup>29<span> / month</span></h4>
-              <ul>
-                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-                <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
-                <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
-              </ul>
-              <a href="#" class="buy-btn">Buy Now</a>
-            </div>
-          </div><!-- End Pricing Item -->
-
-          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="300">
-            <div class="pricing-item">
-              <h3>Developer Plan</h3>
-              <h4><sup>$</sup>49<span> / month</span></h4>
-              <ul>
-                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-                <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
-                <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
-              </ul>
-              <a href="#" class="buy-btn">Buy Now</a>
-            </div>
-          </div><!-- End Pricing Item -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Pricing Section -->
 
     <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials section">
@@ -801,7 +569,7 @@
                 <i class="bi bi-geo-alt flex-shrink-0"></i>
                 <div>
                   <h3>Address</h3>
-                  <p>A108 Adam Street, New York, NY 535022</p>
+                  <p>Jalan Pandan Raya Blok 2 No. 25, Cibodasari, Cibodas, Kota Tangerang 15138</p>
                 </div>
               </div><!-- End Info Item -->
 
@@ -809,7 +577,7 @@
                 <i class="bi bi-telephone flex-shrink-0"></i>
                 <div>
                   <h3>Call Us</h3>
-                  <p>+1 5589 55488 55</p>
+                  <p>(+62) 5520205</p>
                 </div>
               </div><!-- End Info Item -->
 
@@ -817,7 +585,7 @@
                 <i class="bi bi-envelope flex-shrink-0"></i>
                 <div>
                   <h3>Email Us</h3>
-                  <p>info@example.com</p>
+                  <p>marketing@laroseandalan.com</p>
                 </div>
               </div><!-- End Info Item -->
 
@@ -872,33 +640,24 @@
   <footer id="footer" class="footer">
 
     <div class="footer-newsletter">
-      <div class="container">
-        <div class="row justify-content-center text-center">
-          <div class="col-lg-6">
-            <h4>Join Our Newsletter</h4>
-            <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
-            <form action="forms/newsletter.php" method="post" class="php-email-form">
-              <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your subscription request has been sent. Thank you!</div>
-            </form>
+        <div class="container">
+          <div class="row justify-content-center text-center">
+
           </div>
         </div>
       </div>
-    </div>
 
     <div class="container footer-top">
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
           <a href="index.html" class="d-flex align-items-center">
-            <span class="sitename">Arsha</span>
+            <span class="sitename">LAROSE</span>
           </a>
           <div class="footer-contact pt-3">
-            <p>A108 Adam Street</p>
-            <p>New York, NY 535022</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-            <p><strong>Email:</strong> <span>info@example.com</span></p>
+            <p>Jalan Pandan Raya Blok 2 No. 25, Cibodasari, Cibodas</p>
+            <p>Kota Tangerang 15138</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>(+62) 5520205</span></p>
+            <p><strong>Email:</strong> <span>marketing@laroseandalan.com</span></p>
           </div>
         </div>
 
@@ -937,13 +696,11 @@
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Arsha</strong> <span>All Rights Reserved</span></p>
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Larose</strong> <span>All Rights Reserved</span></p>
     </div>
 
   </footer>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Preloader -->
   <div id="preloader"></div>
@@ -994,6 +751,13 @@
       },
     });
   </script>
+
+<a href="https://wa.me/1234567890?text=Hello%20World" target="_blank" class="whatsapp-floating-button">
+    <img src="{{asset('arsha/assets/img/whatsapp.png')}}" alt="WhatsApp" class="whatsapp-icon">
+</a>
+
+
+
 
 
   <!-- Main JS File -->

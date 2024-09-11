@@ -27,7 +27,7 @@ class LandingController extends Controller
 
         // dd($productsPopular);
         // return view('index', compact('products','productsPopular','instagrams','testimonials','blogs','contact'));
-        return view('arsha');
+        return view('arsha', compact('products'));
     }
 
     //quickview
@@ -64,8 +64,13 @@ class LandingController extends Controller
     public function portfolio() {
         // return view('frontend.page.portfolio');
 
+
+        $products = Product::with(['galleries', 'category'])->where('status', '1')->get();
+
+        // dd($products);
+
         $contact = Contact::orderBy('id', 'desc')->first();
-        return view('frontend.page.portfolio', compact('contact'));
+        return view('frontend.page.portfolio', compact('contact','products'));
     }
 
 
@@ -93,5 +98,35 @@ class LandingController extends Controller
         // dd($blogs);
         $contact = Contact::orderBy('id', 'desc')->first();
         return view('frontend.page.blog', compact('blogs','contact'));
+    }
+
+    public function download() {
+        // return view('frontend.page.download');
+
+        $contact = Contact::orderBy('id', 'desc')->first();
+        return view('frontend.page.download', compact('contact'));
+    }
+
+    public function product($slug) {
+        // dd($slug);
+        // return view('frontend.page.product');
+        $product = Product::with(['galleries', 'category'])->where('slug', $slug)->firstOrFail();
+
+        $contact = Contact::orderBy('id', 'desc')->first();
+        return view('frontend.page.product', compact('contact'));
+    }
+
+    public function career() {
+        // return view('frontend.page.career');
+
+        $contact = Contact::orderBy('id', 'desc')->first();
+        return view('frontend.page.career', compact('contact'));
+    }
+
+    public function ourcustomer() {
+        // return view('frontend.page.ourcustomer');
+
+        $contact = Contact::orderBy('id', 'desc')->first();
+        return view('frontend.page.ourcustomer', compact('contact'));
     }
 }

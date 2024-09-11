@@ -39,6 +39,10 @@ Route::get('/aboutus', [LandingController::class, 'aboutus'])->name('aboutus');
 Route::get('/services', [LandingController::class, 'services'])->name('services');
 Route::get('/portfolio', [LandingController::class, 'portfolio'])->name('portfolio');
 Route::get('/contactus', [LandingController::class, 'contactus'])->name('contactus');
+Route::get('/download', [LandingController::class, 'download'])->name('download');
+Route::get('/product/{slug}', [LandingController::class, 'product'])->name('product');
+Route::get('/career', [LandingController::class, 'career'])->name('career');
+Route::get('/ourcustomer', [LandingController::class, 'ourcustomer'])->name('ourcustomer');
 
 
 Route::get('admin/login', [LoginController::class,'index'])->name('admin.login');
