@@ -752,7 +752,7 @@
     });
   </script>
 
-<a href="https://wa.me/1234567890?text=Hello%20World" target="_blank" class="whatsapp-floating-button">
+<a href="https://wa.me/+6281223523545?text=Hello%20World" target="_blank" class="whatsapp-floating-button">
     <img src="{{asset('arsha/assets/img/whatsapp.png')}}" alt="WhatsApp" class="whatsapp-icon">
 </a>
 
