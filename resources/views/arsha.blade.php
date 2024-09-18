@@ -60,19 +60,20 @@
         <ul>
           <li><a href="{{ route('landing-page')}}" class="active">Home</a></li>
           <li><a href="{{ route('aboutus')}}">About</a></li>
-          <li><a href="{{ route('portfolio')}}">Product</a></li>
+          <li><a href="{{ route('products')}}">Product</a></li>
 
           <li><a href="{{ route('services')}}">Services</a></li>
           <li><a href="{{ route('ourcustomer')}}">Our Customer</a></li>
           <li><a href="{{ route('career')}}">Career</a></li>
           <li><a href="{{ route('contactus')}}">Contact</a></li>
+
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
       <a class="btn-getstarted" href="{{('download')}}">Download</a>
 
-    </div>
+            </div>
   </header>
 
   <main class="main">
@@ -255,7 +256,7 @@
           <h4> {{$product->name}} </h4>
           <p> {!! $product->description !!} </p>
           <a href="{{('arsha/assets/img/masonry-portfolio/masonry-portfolio-1.jpg')}}" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-          <a href="{{ route('product', $product->slug)}}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+          <a href="{{ route('productdetail', $product->slug)}}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
           </div>
       </div>
       @empty
@@ -664,9 +665,9 @@
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Useful Links</h4>
           <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="{{ route('landing-page')}}">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="{{ route('aboutus')}}">About us</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="{{ route('services')}}">Services</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
           </ul>
         </div>

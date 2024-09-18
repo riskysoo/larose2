@@ -63,7 +63,7 @@
         <ul>
           <li><a href="{{ route('landing-page')}}" class="active">Home</a></li>
           <li><a href="{{ route('aboutus')}}">About</a></li>
-          <li><a href="{{ route('portfolio')}}">Product</a></li>
+          <li><a href="{{ route('products')}}">Product</a></li>
 
           <li><a href="{{ route('services')}}">Services</a></li>
           <li><a href="{{ route('ourcustomer')}}">Our Customer</a></li>
@@ -103,19 +103,19 @@
             <span class="sitename">LAROSE</span>
           </a>
           <div class="footer-contact pt-3">
-            <p>A108 Adam Street</p>
-            <p>New York, NY 535022</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-            <p><strong>Email:</strong> <span>info@example.com</span></p>
+            <p>Jalan Pandan Raya Blok 2 No. 25, Cibodasari, Cibodas</p>
+            <p>Kota Tangerang 15138</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>(+62) 5520205</span></p>
+            <p><strong>Email:</strong> <span>marketing@laroseandalan.com</span></p>
           </div>
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Useful Links</h4>
           <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="{{ route('landing-page')}}">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="{{ route('aboutus')}}">About us</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="{{ route('services')}}">Services</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
           </ul>
         </div>

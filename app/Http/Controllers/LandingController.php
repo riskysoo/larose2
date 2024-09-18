@@ -61,8 +61,8 @@ class LandingController extends Controller
         return view('frontend.page.services', compact('contact'));
     }
 
-    public function portfolio() {
-        // return view('frontend.page.portfolio');
+    public function products() {
+        // return view('frontend.page.products');
 
 
         $products = Product::with(['galleries', 'category'])->where('status', '1')->get();
@@ -70,7 +70,7 @@ class LandingController extends Controller
         // dd($products);
 
         $contact = Contact::orderBy('id', 'desc')->first();
-        return view('frontend.page.portfolio', compact('contact','products'));
+        return view('frontend.page.products', compact('contact','products'));
     }
 
 
@@ -107,14 +107,7 @@ class LandingController extends Controller
         return view('frontend.page.download', compact('contact'));
     }
 
-    public function product($slug) {
-        // dd($slug);
-        // return view('frontend.page.product');
-        $product = Product::with(['galleries', 'category'])->where('slug', $slug)->firstOrFail();
 
-        $contact = Contact::orderBy('id', 'desc')->first();
-        return view('frontend.page.product', compact('contact'));
-    }
 
     public function career() {
         // return view('frontend.page.career');

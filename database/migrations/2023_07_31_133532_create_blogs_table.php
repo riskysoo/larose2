@@ -18,6 +18,7 @@ return new class extends Migration
             $table->longText('content');
             $table->string('slug');
             $table->string('image')->nullable();
+            $table->string('pdf')->nullable();
             $table->text('description')->nullable();
             $table->string('author')->nullable();
             $table->enum('status',['publish','draft'])->default('draft');
