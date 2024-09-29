@@ -251,7 +251,7 @@
             <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
       @forelse ($products as $product )
       <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-          <img src="{{('arsha/assets/img/masonry-portfolio/masonry-portfolio-1.jpg')}}" class="img-fluid" alt="">
+        <img src="{{ asset('/storage/' . $product->galleries->first()->image) }}" class="img-fluid" alt="{{ $product->name }}">
           <div class="portfolio-info">
           <h4> {{$product->name}} </h4>
           <p> {!! $product->description !!} </p>

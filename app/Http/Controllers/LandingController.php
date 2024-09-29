@@ -41,7 +41,7 @@ class LandingController extends Controller
         $product = Product::with(['galleries', 'category'])->where('slug', $slug)->firstOrFail();
         //get random products
         $randomProducts = Product::with(['galleries', 'category'])->where('status', '1')->inRandomOrder()->take(6)->get();
-        // dd($product);
+        //dd($product);
         $contact = Contact::orderBy('id', 'desc')->first();
         return view('frontend.page.productdetail', compact('product', 'randomProducts','contact'));
     }
