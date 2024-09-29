@@ -29,10 +29,14 @@
           <div class="col-lg-8">
             <div class="product-details-slider swiper init-swiper">
               <div class="swiper-wrapper align-items-center">
+                @forelse ($product->galleries as $item )
                 <div class="swiper-slide">
-                  <img src="{{('arsha/assets/img/portfolio/app-1.jpg')}}" alt="">
-                </div>
-                <div class="swiper-slide">
+                    <img src="{{ asset('/storage/' . $item->image)}}" alt="">
+                  </div>
+                @empty
+                  Ga ada Foto
+                @endforelse
+                {{-- <div class="swiper-slide">
                   <img src="{{('arsha/assets/img/portfolio/product-1.jpg')}}" alt="">
                 </div>
                 <div class="swiper-slide">
@@ -40,7 +44,7 @@
                 </div>
                 <div class="swiper-slide">
                   <img src="{{('arsha/assets/img/portfolio/books-1.jpg')}}" alt="">
-                </div>
+                </div> --}}
               </div>
               <div class="swiper-pagination"></div>
             </div>
@@ -48,19 +52,17 @@
 
           <div class="col-lg-4">
             <div class="product-info" data-aos="fade-up" data-aos-delay="200">
-              <h3>Project information</h3>
+              <h3>Product information</h3>
               <ul>
-                <li><strong>Category</strong>: Web design</li>
+                <li><strong>Code</strong>: {{ $product->code }}</li>
                 <li><strong>Client</strong>: ASU Company</li>
-                <li><strong>Project date</strong>: 01 March, 2020</li>
+                <li><strong>Project date</strong> {{ $product->created_at }}</li>
                 <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
               </ul>
             </div>
             <div class="product-description" data-aos="fade-up" data-aos-delay="300">
-              <h2>Exercitationem repudiandae officiis neque suscipit</h2>
-              <p>
-                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
-              </p>
+              <h2>{{ $product->name }}</h2>
+              {!! $product->description !!}
             </div>
           </div>
 
