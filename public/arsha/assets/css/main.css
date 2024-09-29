@@ -34,24 +34,6 @@
     font-weight: bold; /* Atur tebal sesuai kebutuhan */
   }
 
-.product-name {
-    font-size: 18px; /* Ukuran font */
-    font-weight: bold; /* Tebal */
-    color: #333; /* Warna teks */
-    text-transform: uppercase; /* Ubah menjadi huruf kapital */
-    margin: 10px 0; /* Jarak atas dan bawah */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Bayangan teks */
-}
-
-.product-name:hover {
-    color: #007bff; /* Warna saat hover */
-    transition: color 0.3s; /* Transisi halus */
-}
-
-.product-name {
-    font-family: 'Roboto', sans-serif; /* Menggunakan font Roboto */
-}
-
 
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
@@ -2169,4 +2151,22 @@ body {
     max-width: 300px; /* Atau ukuran yang Anda inginkan */
     /* Anda bisa menambahkan properti lain seperti height, padding, dsb. */
 }
+
+.product-name {
+    font-size: 18px; /* Ukuran font */
+    font-weight: bold; /* Tebal */
+    color: #333; /* Warna teks */
+    text-transform: uppercase; /* Ubah menjadi huruf kapital */
+    margin: 10px 0; /* Jarak atas dan bawah */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Bayangan teks */
+    }
+
+  .product-name:hover {
+    color: #007bff; /* Warna saat hover */
+    transition: color 0.3s; /* Transisi halus */
+    }
+
+  .product-name {
+    font-family: 'Roboto', sans-serif; /* Menggunakan font Roboto */
+    }
 
