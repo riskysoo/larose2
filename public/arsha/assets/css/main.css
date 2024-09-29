@@ -2170,3 +2170,71 @@ body {
     font-family: 'Roboto', sans-serif; /* Menggunakan font Roboto */
     }
 
+/*--------------------------------------------------------------
+# Starter Download
+--------------------------------------------------------------*/
+.text-center {
+    text-align: center; /* Memusatkan teks */
+    margin-bottom: 20px; /* Jarak bawah untuk memberi ruang */
+}
+
+.catalog-container {
+    display: flex;
+    justify-content: space-around; /* Mengatur jarak antar item */
+    flex-wrap: wrap; /* Agar item bisa pindah ke baris berikutnya jika ruang tidak cukup */
+}
+
+.catalog-item {
+    flex: 1 1 45%; /* Membuat setiap item mengambil ruang 45% */
+    margin: 15px; /* Jarak antara item */
+    text-align: center; /* Menyelaraskan teks ke tengah */
+    padding: 10px; /* Padding untuk memberikan ruang dalam item */
+    border: 1px solid #ddd; /* Tambahkan border untuk pemisah */
+    border-radius: 8px; /* Rounded corners */
+    transition: box-shadow 0.3s; /* Animasi saat hover */
+}
+
+.catalog-item:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Efek hover */
+}
+
+.catalog-image {
+    width: 50%; /* Ukuran gambar */
+    height: auto;
+}
+
+.catalog-text {
+    display: block; /* Agar teks berada di baris baru */
+    margin-top: 10px; /* Jarak antara gambar dan teks */
+    font-size: 18px; /* Ukuran font teks */
+    color: #333; /* Warna teks */
+}
+
+.catalog-description {
+    font-size: 14px; /* Ukuran font deskripsi */
+    color: #666; /* Warna deskripsi */
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #ddd; /* Ganti warna dan ketebalan garis sesuai tema */
+    margin: 20px 0; /* Jarak atas dan bawah */
+}
+
+.catalog-text i {
+    margin-right: 5px; /* Jarak antara ikon dan teks */
+    color: #007bff; /* Warna ikon */
+}
+
+@media (max-width: 768px) {
+    .catalog-container {
+        flex-direction: column; /* Mengubah menjadi kolom pada layar kecil */
+    }
+
+    .catalog-item {
+        margin: 10px 0; /* Jarak antar item */
+    }
+}
+
+
+
