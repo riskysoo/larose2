@@ -252,12 +252,13 @@
       @forelse ($products as $product )
       <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
         <img src="{{ asset('/storage/' . $product->galleries->first()->image) }}" class="img-fluid" alt="{{ $product->name }}">
-          <div class="portfolio-info">
-          <h4> {{$product->name}} </h4>
-          <p> {!! $product->description !!} </p>
-          <a href="{{('arsha/assets/img/masonry-portfolio/masonry-portfolio-1.jpg')}}" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-          <a href="{{ route('productdetail', $product->slug)}}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-          </div>
+        <div class="portfolio-info">
+            <h4> {{$product->name}} </h4>
+            <p> {!! $product->description !!} </p>
+            <a href="{{ asset('/storage/' . $product->galleries->first()->image) }}" title="{{ $product->name }}" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+            <a href="{{ route('productdetail', $product->slug) }}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+        </div>
+
       </div>
       @empty
 
