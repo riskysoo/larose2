@@ -58,7 +58,7 @@ class LandingController extends Controller
         // return view('frontend.page.services');
 
         $contact = Contact::orderBy('id', 'desc')->first();
-        return view('frontend.page.services', compact('contact'));
+        return view('frontend.page.Services', compact('contact'));
     }
 
     public function products() {
