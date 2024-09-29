@@ -29,7 +29,7 @@ use App\Http\Controllers\Admin\TestimonialController;
 
 
 Route::get('/', [LandingController::class, 'index'])->name('landing-page');
-Route::get('/productdetail/{slug}', [LandingController::class, 'productdetail'])->name('productDetail');
+
 
 Route::get('/blog', [LandingController::class, 'blog'])->name('blog');
 Route::get('/blogdetail/{slug}', [LandingController::class, 'blogdetail'])->name('blogdetail');
