@@ -113,8 +113,9 @@
             <div class="swiper-slide"><img src="{{asset('arsha/assets/img/clients/client-4.png')}}" class="img-fluid" alt=""></div>
             <div class="swiper-slide"><img src="{{asset('arsha/assets/img/clients/client-5.png')}}" class="img-fluid" alt=""></div>
             <div class="swiper-slide"><img src="{{asset('arsha/assets/img/clients/client-6.png')}}" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="{{asset('arsha/assets/img/clients/client-7.png')}}" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="{{asset('arsha/assets/img/clients/client-8.png')}}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{{asset('arsha/assets/img/clients/client-7.jpg')}}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{{asset('arsha/assets/img/clients/client-8.jpg')}}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{{asset('arsha/assets/img/clients/client-9.png')}}" class="img-fluid" alt=""></div>
             </div>
             <!-- Tambahkan elemen pagination -->
             <div class="swiper-pagination"></div>
@@ -754,7 +755,7 @@
     });
   </script>
 
-<a href="https://wa.me/+6281223523545?text=Hello%20World" target="_blank" class="whatsapp-floating-button">
+<a href="https://wa.me/+628128626033?text=Hello%20World" target="_blank" class="whatsapp-floating-button">
     <img src="{{asset('arsha/assets/img/whatsapp.png')}}" alt="WhatsApp" class="whatsapp-icon">
 </a>
 
